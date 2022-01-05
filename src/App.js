@@ -1,10 +1,17 @@
 import logo from './logo.svg';
 import './App.css';
 
+ 
 function App() {
+  let Akh = <h1 align="center">Akhil Frst Page</h1>
+  let Akh1 = <h2 align="center">Akhil Frst line</h2>
+  
   return (
+ 
     <div className="App">
       <header className="App-header">
+        <h1>HELLO WORLD</h1>
+        
         <img src={logo} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
@@ -17,9 +24,16 @@ function App() {
         >
           Learn React
         </a>
+        {Akh}
+        {Akh1}
+        <Cotton></Cotton>
+       
       </header>
     </div>
   );
 }
-
+const Cotton = () => {
+  return <h1>hello</h1>;
+};
+ 
 export default App;
