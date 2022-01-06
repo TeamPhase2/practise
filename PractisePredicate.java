@@ -16,7 +16,7 @@ public class PractisePredicate {
         Predicate<Integer> predicate1 = i -> i > 100;
         Predicate<Integer> predicate2 = i -> i < 200;
 
-        java.util.function.Predicate<Integer> andPredicate = predicate1.and(predicate2);
+        Predicate<Integer> andPredicate = predicate1.and(predicate2);
 
         List<Integer> collect = numbers.stream()
                 .filter(andPredicate)
