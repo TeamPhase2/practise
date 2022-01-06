@@ -1,39 +1,48 @@
 import logo from './logo.svg';
+import react, { Profiler } from 'react';
 import './App.css';
+import Button1 from './Button1';
+import ButtonClass from './ButtonClass';
+
+
 
  
 function App() {
-  let Akh = <h1 align="center">Akhil Frst Page</h1>
-  let Akh1 = <h2 align="center">Akhil Frst line</h2>
+  let hello = <h1 align="center">Akhil Frst Page</h1>
+  let frst = <h1>Akhil Frst line</h1>
   
   return (
  
     <div className="App">
       <header className="App-header">
         <h1>HELLO WORLD</h1>
+        <Button1 title={'click here'}/>
+        <ButtonClass/>
+        
         
         <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-        {Akh}
-        {Akh1}
+       
+       
+        {hello}
+        
+        {frst}
         <Cotton></Cotton>
+        <Cotton1></Cotton1>
+       
+       
+   
        
       </header>
     </div>
   );
 }
 const Cotton = () => {
-  return <h1>hello</h1>;
+  return <button>Submit</button>
+  ;
+};
+const Cotton1= () => {
+  return <h4>Akhil Goud</h4>
+  ;
 };
  
 export default App;
