@@ -1,19 +1,26 @@
 package practice;
 
 public class EmpolyeeBuilder {
-    private Integer id;
+    private String id;
     private String name;
-    private String address;
-    private String color;
+    private Address address;
+    private Long salary;
 
     public EmpolyeeBuilder() {
     }
 
+    public EmpolyeeBuilder(String id, String name, Address address, Long salary) {
+        this.id = id;
+        this.name = name;
+        this.address = address;
+        this.salary = salary;
 
-    public EmpolyeeBuilder setId(Integer id) {
+    }
+
+
+    public EmpolyeeBuilder setId(String id) {
         this.id = id;
         return this;
-
     }
 
     public EmpolyeeBuilder setName(String name) {
@@ -21,18 +28,18 @@ public class EmpolyeeBuilder {
         return this;
     }
 
-    public EmpolyeeBuilder setAddress(String address) {
+    public EmpolyeeBuilder setSalary(Long salary) {
+        this.salary = salary;
+        return this;
+    }
+
+    public EmpolyeeBuilder setAddress(Address address) {
         this.address = address;
         return this;
     }
 
 
-    public EmpolyeeBuilder setColor(String color) {
-        this.color = color;
-        return this;
-    }
-
     public Employee build() {
-        return new Employee(id, name, address, color);
+        return new Employee(id, name, address, salary);
     }
 }

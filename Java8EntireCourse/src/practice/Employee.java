@@ -1,26 +1,31 @@
 package practice;
 
-public class Employee
-{
-    private Integer id;
+public class Employee {
+    private String id;
     private String name;
-    private String address;
-    private String color;
+    private Address address;
+    private Long salary;
 
-    public Employee(Integer id, String name, String address, String color) {
-        this.id=id;
-        this.name=name;
-        this.address=address;
-        this.color=color;
-
-    }
-
-    public Integer getId() {
-        return id;
-    }
-
-    public void setId(Integer id) {
+    public Employee(String id, String name, Address address, long salary) {
         this.id = id;
+        this.name = name;
+        this.address = address;
+        this.salary = salary;
+    }
+
+    public Employee() {
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Long salary) {
+        this.salary = salary;
     }
 
     public String getName() {
@@ -31,24 +36,21 @@ public class Employee
         this.name = name;
     }
 
-    public String getAddress() {
+    public Address getAddress() {
         return address;
     }
 
-    public void setAddress(String address) {
+    public void setAddress(Address address) {
         this.address = address;
-    }
-
-    public String getColor() {
-        return color;
-    }
-
-    public void setColor(String color) {
-        this.color = color;
     }
 
     @Override
     public String toString() {
-        return "Employee Id--"+id+" "+"Name---"+name+"  "+"Address---"+address+" "+"color--"+color;
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", address=" + address +
+                ", salary=" + salary +
+                '}';
     }
 }
