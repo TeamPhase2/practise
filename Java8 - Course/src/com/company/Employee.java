@@ -1,23 +1,27 @@
 package com.company;
 
-public class Employee {
-    private int id;
-    private String name;
-    private double salary;
-    private String location;
+import java.util.List;
 
-    public Employee(int id, String name, double salary, String location) {
+public class Employee {
+
+    private String id;
+    private String name;
+    private Long salary;
+    private List<Address> addressList;
+
+    public Employee(String id, String name, Long salary, List<Address> addressList) {
         this.id = id;
         this.name = name;
         this.salary = salary;
-        this.location = location;
+        this.addressList = addressList;
     }
 
-    public int getId() {
+
+    public String getId() {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(String id) {
         this.id = id;
     }
 
@@ -29,29 +33,29 @@ public class Employee {
         this.name = name;
     }
 
-    public double getSalary() {
+    public Long getSalary() {
         return salary;
     }
 
-    public void setSalary(double salary) {
+    public void setSalary(Long salary) {
         this.salary = salary;
     }
 
-    public String getLocation(String location) {
-        return location;
+    public List<Address> getAddressList() {
+        return addressList;
     }
 
-    public void setLocation(String location) {
-        this.location = location;
+    public void setAddressList(List<Address> addressList) {
+        this.addressList = addressList;
     }
 
     @Override
     public String toString() {
         return "Employee{" +
-                "id=" + id +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", salary=" + salary +
-                ", location='" + location + '\'' +
+                ", addressList=" + addressList +
                 '}';
     }
 }
