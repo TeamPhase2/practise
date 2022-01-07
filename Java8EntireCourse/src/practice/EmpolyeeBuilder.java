@@ -1,38 +1,56 @@
 package practice;
 
-public class EmpolyeeBuilder {
-    private Integer id;
+public class Employee {
+    private String id;
     private String name;
-    private String address;
-    private String color;
+    private Address address;
+    private Long salary;
 
-    public EmpolyeeBuilder() {
-    }
-
-
-    public EmpolyeeBuilder setId(Integer id) {
+    public Employee(String id, String name, Address address, long salary) {
         this.id = id;
-        return this;
-
-    }
-
-    public EmpolyeeBuilder setName(String name) {
         this.name = name;
-        return this;
-    }
-
-    public EmpolyeeBuilder setAddress(String address) {
         this.address = address;
-        return this;
+        this.salary = salary;
     }
 
-
-    public EmpolyeeBuilder setColor(String color) {
-        this.color = color;
-        return this;
+    public Employee() {
     }
 
-    public Employee build() {
-        return new Employee(id, name, address, color);
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public Long getSalary() {
+        return salary;
+    }
+
+    public void setSalary(Long salary) {
+        this.salary = salary;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public Address getAddress() {
+        return address;
+    }
+
+    public void setAddress(Address address) {
+        this.address = address;
+    }
+
+    @Override
+    public String toString() {
+        return "Employee{" +
+                "id='" + id + '\'' +
+                ", name='" + name + '\'' +
+                ", address=" + address +
+                ", salary=" + salary +
+                '}';
     }
 }
