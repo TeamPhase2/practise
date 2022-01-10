@@ -5,22 +5,19 @@ import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Function;
+import java.util.function.Predicate;
 import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class PracticeFunction {
-
-
     public static void main(String args[]) {
 
         Address address1 = new Address("1", "Hyderabad", "Telangana");
         Address address2 = new Address("2", "Chennai", "Tamilnadu");
 
-
         List<Address> addressList = new ArrayList<>();
         addressList.add(address1);
         addressList.add(address2);
-
 
         List<Employee> employeeList = new ArrayList<>();
 
@@ -35,18 +32,21 @@ public class PracticeFunction {
         Function<Employee, Boolean> salaryGreaterthan5000 = employees -> {
             return employees.getSalary() > 5000L;
         };
-        List<Employee> employeesList = employeeList.stream().filter(salaryGreaterthan5000::apply).collect(Collectors.toList());
+        
+       List<Employee> employeesList = employeeList.stream().filter(salaryGreaterthan5000::apply).collect(Collectors.toList());
 
-        System.out.println(employeesList);
+        System.out.println(" Employee whose salary is greater than 5000L : " +
+                employeesList);
 
-        // list out of all the cities from employee list
-        Function<Address, String> cityList = a -> {
-            return a.getCity();
-        };
+        Function<List<Employee>, List<String>> citiesList = employees -> employees.stream()
+                .map(Employee::getAddressList)
+                .flatMap(List::stream)
+                .map(Address::getCity)
+                .distinct()
+                .collect(Collectors.toList());
 
-           // Error occurring in apply method  -------cityList::<<apply>>----------
-            List<Employee> cities = employeeList.stream().filter(cityList::apply).collect(Collectors.toList());
-             System.out.println(cities);
+        System.out.println("List of cities are..");
+        citiesList.apply(employeeList).forEach(System.out::println);
     }
 }
 
