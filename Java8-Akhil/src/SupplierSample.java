@@ -1,6 +1,7 @@
 import java.util.function.Supplier;
+import java.util.stream.IntStream;
 
-public class supplierSample {
+public class SupplierSample {
 
     public static void main(String[] args) {
 
@@ -8,13 +9,7 @@ public class supplierSample {
         int n = 20;
         Supplier<Integer> integerSupplier = () -> {
             int i;
-            for (i = 1; i < n; i++) {
-
-                if (i % 2 == 0) {
-                    System.out.print(" " + i);
-
-                }
-            }
+            IntStream.range(1, n).filter(x -> x % 2 == 0).forEach(System.out::println);
             return null;
         };
         integerSupplier.get();
