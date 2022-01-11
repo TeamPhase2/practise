@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Java8 - Course/Java8 - Course.iml" filepath="$PROJECT_DIR$/Java8 - Course/Java8 - Course.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java8-Akhil/Java8-Akhil.iml" filepath="$PROJECT_DIR$/Java8-Akhil/Java8-Akhil.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Java8EntireCourse/Java8EntireCourse.iml" filepath="$PROJECT_DIR$/Java8EntireCourse/Java8EntireCourse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/java8lambdabasics/java8lambdabasics.iml" filepath="$PROJECT_DIR$/java8lambdabasics/java8lambdabasics.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/practise.iml" filepath="$PROJECT_DIR$/.idea/practise.iml" />
+    </modules>
+  </component>
+</project>

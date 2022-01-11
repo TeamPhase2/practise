@@ -28,7 +28,7 @@ public class ExampleUsingJava7 {
         });
 		
 		//Step 2: Create a method that prints all elements in the list.
-        System.out.println("Printing all persons");
+        System.out.println("Printing all person");
 	    printAll(people);
 	    
 		

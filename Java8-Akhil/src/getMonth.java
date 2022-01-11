@@ -1,7 +1,7 @@
 import java.time.Month;
 import java.time.LocalDate;
 
-class GetMonthByDate {
+class GetMonth {
 
     // Function to get month
     public static void
@@ -31,5 +31,6 @@ class GetMonthByDate {
         GetMonthByDate(date);
     }
 }
+
 
 
