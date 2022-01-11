@@ -13,20 +13,20 @@ public class AddressMain extends Address{
 	}
 	public static void main(String[] args) {
 		Function<Address, String> funcAddressToString= (Address a)-> {return a.getAddress();};
-	    List<Address> AddressList= 
+	    List<Address> addressList= 
 	    Arrays.asList(new Address("3", "Karnataka","Bangalore"),
 	    		       new Address("4", "Tamilnadu", "Chennai"));
 	    
-	    List<String> AddressNameList=AddressNameList(AddressList, funcAddressToString);
-	    AddressNameList.forEach(System.out::println);
+	    List<String> addressNameList=addressNameList(addressList, funcAddressToString);
+	    addressNameList.forEach(System.out::println);
 	}
-	public static List<String> AddressNameList(List<Address> AddressList, Function<Address, String> funcAddressToString){
-	   List<String> AddressNameList=new ArrayList<String>(); 
-	   for(Address Address:AddressList){
-	     AddressNameList.add(funcAddressToString.apply(Address));
+	public static List<String> addressNameList(List<Address> addressList, Function<Address, String> funcAddressToString){
+	   List<String> addressNameList=new ArrayList<String>(); 
+	   for(Address address:addressList){
+	     addressNameList.add(funcAddressToString.apply(address));
 	   }
 	   
-	   return AddressNameList;
+	   return addressNameList;
 	}
 
 }
